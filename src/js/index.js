@@ -14,7 +14,6 @@ import { elements, renderLoader, clearLoader } from './views/base';
 //  Shopping list object
 // Liked recipes
 const state = {};
-window.state = state;
 
 /**
  * SEARCH CONTROLLER
@@ -98,7 +97,6 @@ const controlRecipe = async () => {
                 state.likes.isLiked(id)
             );
         } catch (e) {
-            console.log(e);
             alert ('Error processing recipe!');
         }
         
@@ -211,5 +209,3 @@ elements.recipe.addEventListener('click', e => {
         controlLike();
     }
 });
-
-window.l = new List();
